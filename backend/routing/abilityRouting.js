@@ -15,9 +15,10 @@ const {
 // associate controller endpoints to routes
 router.route('/')
     .get(getAbilities)
-router.route('/:abilityName')
-    .get(getAbility)
     .post(setAbility)
+
+router.route('/:id')
+    .get(getAbility)
     .put(updateAbility)
     .delete(deleteAbility)
 
